@@ -1,0 +1,37 @@
+﻿
+
+@using Microsoft.AspNetCore.Identity;
+
+@{
+    ViewData["Title"] = "User Details";
+}
+
+<div class="ps-2">
+    <h3 class="mt-4 display-6">Details</h3>
+
+    <form asp-action="AddUserAction" method="post" class="d-flex gap-3 flex-column mx-5 mt-3">
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Username</label>
+            <input name="username" type="text" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div>
+            <label for="exampleFormControlTextarea1" class="form-label">Email</label>
+            <input name="email" class="form-control" id="exampleFormControlTextarea1" ></input>
+        </div>
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input name="password" type="password" class="form-control" id="exampleFormControlInput1" />
+        </div>
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Role</label>
+            <input name="role" type="text" class="form-control" id="exampleFormControlInput1" />
+        </div>
+        <div class="mt-3">
+            <input type="submit" class="btn btn-primary" value="Submit"></input>
+        </div>
+    </form>
+    @* <ul id="inventoryList" >
+    </ul> *@
+</div>
+
+

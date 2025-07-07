@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model Inventory_Management2.Models.ViewModels.Login
+
+@{
+    ViewData["Title"] = "Login";
+}
+<div class="d-flex justify-content-center align-items-center" style="height: 500px">
+    <div class="card shadow-lg" style="width: 400px; border-radius: 10px">
+        <div class="card-body">
+            <h3 class="card-title text-center mb-4">Sign in</h3>
+            <form action="SignInAction" method="post">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Username</label>
+                    <input asp-for="Username" type="text" class="form-control" id="exampleInputUsername1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input asp-for="Password" type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+    
+}
+
+<div class="ps-2">
+    <h3 class="mt-4 display-6">Dashboard</h3>
+    
+    @* <ul id="inventoryList" >
+    </ul> *@
+</div>
+
+@section Scripts {
+    <script>
+        async function loadInventory() {
+            try {
+                const response = await fetch('/api/items');
+                if (!response.ok) throw new Error("API error");
+                const items = await response.json();
+
+                const list = document.getElementById("inventoryList");
+                list.innerHTML = items.map(item => `<li>${item.name}</li>`).join('');
+            } catch (err) {
+                console.error("Failed to load inventory:", err);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", loadInventory);
+    </script>
+}

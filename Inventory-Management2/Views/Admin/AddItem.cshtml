@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@using Inventory_Management2.Models.ViewModels
+@model ItemView
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="ps-2">
+    <h3 class="mt-4 display-6">Details</h3>
+
+    <form asp-action="AddItem" method="post" class="d-flex gap-3 flex-column mx-5 mt-3">
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Id</label>
+            <input type="text" class="form-control" readonly id="exampleFormControlInput1" placeholder="Item Id">
+        </div>
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Item Name">
+        </div>
+        <div>
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Category</label>
+            <input name="category" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Item Category">
+        </div>
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Stock Quantity</label>
+            <input name="stockQuantity" type="number" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Unit Price</label>
+            <input name="unitPrice" type="number" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Low Stock Threshold</label>
+            <input name="lowStockThreshold" type="number" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div>
+
+            <input type="submit" class="btn btn-primary" value="Submit"></input>
+        </div>
+    </form>
+    @* <ul id="inventoryList" >
+    </ul> *@
+</div>
+
+

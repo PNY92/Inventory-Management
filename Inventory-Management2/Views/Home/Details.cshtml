@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@using Inventory_Management2.Models.ViewModels
+@model ItemView
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="ps-2">
+    <h3 class="mt-4 display-6">Details</h3>
+
+    <form class="d-flex gap-3 flex-column mx-5 mt-3">
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Id</label>
+            <input type="text" class="form-control" disabled id="exampleFormControlInput1" placeholder="Item Name" value="@Model.Id">
+        </div>
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" disabled id="exampleFormControlInput1" placeholder="Item Name" value="@Model.Name">
+        </div>
+        <div>
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea class="form-control" disabled id="exampleFormControlTextarea1" rows="3">@Model.Description</textarea>
+        </div>
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Category</label>
+            <input type="text" class="form-control" disabled id="exampleFormControlInput1" placeholder="Item Category" value="@Model.Category">
+        </div>
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Unit Price</label>
+            <input type="number" class="form-control" disabled id="exampleFormControlInput1" value="@Model.UnitPrice">
+        </div>
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Low Stock Threshold</label>
+            <input type="number" class="form-control" disabled id="exampleFormControlInput1" value="@Model.LowStockThreshold">
+        </div>
+    </form>
+    @* <ul id="inventoryList" >
+    </ul> *@
+</div>
+
+
